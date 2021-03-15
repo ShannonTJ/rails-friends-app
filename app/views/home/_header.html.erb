@@ -18,6 +18,13 @@
           <li class="nav-item">
             <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class:'nav-link'%>
           </li>
+          </ul>
+          <form class="d-flex form-inline my-2 my-lg-0">
+            <%= form_tag friends_path, :method => 'get' do %>
+            <%= text_field_tag :search, params[:search], class: "form-control mr-sm-2", placeholder: "Search friends" %>
+            <%= submit_tag "Search", class: "btn btn-outline-secondary my-2 my-sm-0 mx-2" %>
+            <% end %>
+          </form>
 
         <% else %>
 
@@ -31,12 +38,7 @@
         <% end %>
       
       </ul>
-      <form class="d-flex">
-          <%= form_tag friends_path, :method => 'get' do %>
-          <%= text_field_tag :search, params[:search], class: "form-control me-2", placeholder: "Search friends" %>
-          <%= submit_tag "Search", class: "btn btn-outline-secondary" %>
-          <% end %>
-      </form>
+
     </div>
   </div>
 </nav>
