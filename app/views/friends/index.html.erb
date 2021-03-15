@@ -7,7 +7,6 @@
         <th>Email</th>
         <th>Phone</th>
         <th>Twitter</th>
-        <th>User ID</th>
         <th colspan="1"></th>
       </tr>
     </thead>
@@ -22,8 +21,7 @@
           <td><%= friend.email %></td>
           <td><%= friend.phone %></td>
           <td><%= friend.twitter %></td>
-          <td><%= friend.user_id %></td>
-          <td class="text-center"><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-outline-danger" %></td>
+          <td class="text-center"><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-outline-danger px-3" %></td>
         </tr>
         <% end %>
       <% end %>
