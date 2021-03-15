@@ -17,7 +17,7 @@ class Friend < ApplicationRecord
 
     def self.search(search)
         if search 
-            where(["first_name LIKE :search OR last_name LIKE :search or twitter LIKE :search", search: "%#{search}%"])
+            where(["lower(first_name) LIKE lower(?) OR lower(last_name) LIKE lower(?) OR lower(email) LIKE lower(?) OR lower(phone) LIKE lower(?) OR lower(twitter) LIKE lower(?)", "%#{search}%", "%#{search}%", "%#{search}%","%#{search}%","%#{search}%"])
         else 
             all
         end
