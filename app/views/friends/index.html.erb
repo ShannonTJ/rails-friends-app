@@ -23,7 +23,7 @@
           <td><%= friend.phone %></td>
           <td><%= friend.twitter %></td>
           <td><%= friend.user_id %></td>
-          <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="text-center"><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-outline-danger" %></td>
         </tr>
         <% end %>
       <% end %>
