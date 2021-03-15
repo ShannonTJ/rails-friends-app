@@ -15,4 +15,12 @@ class Friend < ApplicationRecord
         self.twitter = "(no twitter)" if self.twitter.blank?
     end
 
+    def self.search(search)
+        if search 
+            where(["first_name LIKE :search OR last_name LIKE :search", search: "%#{search}%"])
+        else 
+            all
+        end
+    end
+
 end
