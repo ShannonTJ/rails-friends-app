@@ -51,7 +51,11 @@
   <div class="actions">
     <%= form.submit class:"btn btn-dark" %> 
     <% if name == "edit" %>
-      <%= link_to 'Delete Friend', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      <%= link_to 'Cancel', friends_path, class:"btn btn-dark" %><br/><br/>
+      <%= link_to 'Delete friend', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+    <% end %>
+    <% if name == "new" %>
+      <%= link_to 'Cancel', friends_path, class:"btn btn-dark" %><br/><br/>
     <% end %>
   </div>
 <% end %>
