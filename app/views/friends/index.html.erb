@@ -16,7 +16,7 @@
         <% if friend.user == current_user %>
         <tr>
           <td>
-            <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
+            <%= link_to friend.first_name + ' ' + friend.last_name, friend, class:"text-decoration-none text-primary" %>
           </td>
           <td><%= friend.email %></td>
           <td><%= friend.phone %></td>
@@ -34,8 +34,30 @@
 
 <% else %>
 
-  <h1>Hello world!</h1>
+  <div class="card">
+      <div class="card-header">
+        <h3>Welcome!</h3>
+      </div>
 
-  My first rails webpage      
+    <div class="card-body">
+    <br/>
+    <h5>This is a Ruby on Rails project, styled with Bootstrap.</h5>
+    <br/>
+    <h5>It contains examples of:</h5>
+    <br/>
+      <ul>
+        <li>CRUD operations</li>
+        <li>Navbar search</li>
+        <li>User profile functionality:</li>
+          <ul>
+            <li>Sign in & sign out</li>
+            <li>Profile update page</li>
+            <li>Password recovery</li>
+          </ul>
+      </ul>
+    <br/>
+    <h5>Create an account to get started!</h5>
+    </div>
+  </div>
 
 <% end %>
