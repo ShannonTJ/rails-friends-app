@@ -46,8 +46,12 @@
   </div>
 
   <br/>
+  
 
   <div class="actions">
-    <%= form.submit class:"btn btn-dark" %>
+    <%= form.submit class:"btn btn-dark" %> 
+    <% if name == "edit" %>
+      <%= link_to 'Delete Friend', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+    <% end %>
   </div>
 <% end %>
